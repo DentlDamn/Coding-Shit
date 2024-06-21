@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Practice Stuff</title>
-        <link rel="stylesheet" href="prac0.css">
-    </head>
-    <body>
-        <p>This is a paragraph element. You can write things in here.</p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" >
+    <title>Are You Cool?</title>
+    <link rel="stylesheet" href="prac0.css">
+  </head>
+  <body>
+    <h1 id="title">Are You Cool?</h1>
+    <p id="description">Do all the people stare at you? Have you got perfect hair? Anyone ever called you "rad"? Take my survey and I'll return an answer!</p>
+    <form id="survey-form">
+        <fieldset>
+      <label id="name-label" for="name">Nickname <input required id="name" type="text" placeholder="Name"></label><br>
+      <label id="email-label" for="email">Email <input required id="email" type="email" placeholder="Email"></label><br>
+      <label id="number-label" for="number">How cool are you? <input min="0" max="10" id="number" type="number" placeholder="1-10"></label>
+      </fieldset>
+      <fieldset>
+      <p>Do you watch MMA?</p>
+      <label>Yes
+        <input name="yesorno" value="yes" type="radio">
+        </label>
+        <label>No
+          <input name="yesorno" value="no" type="radio">
+      </label><br>
+      <p>Check all that apply:</p>
+      <label>
+        <input value="happy" type="checkbox">I'm happy.
+      </label>
+      <label>
+        <input value="smart" type="checkbox">I'm smart.
+      <label>
+        <input value="helpful" type="checkbox">I'm helpful.
+      </label><br></fieldset>
+      <fieldset>
+      <p>Has anyone called you cool before?</p>
+      <select id="dropdown">
+        <option>Never</option>
+        <option>Rarely</option>
+        <option>Sometimes</option>
+        <option>Often</option>
+        <option>Always</option>
+        </select>
+        <p>Explain to me why you believe you're cool below.</p>
+          <textarea placeholder="Enter text here">
 
-    </body>
-</html>
+          </textarea>
+          <button id="submit" type="submit">Submit</button>
+          </fieldset>
+    </form>
+  </body>
+  </html
