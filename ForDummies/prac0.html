@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" >
-    <title>Are You Cool?</title>
-    <link rel="stylesheet" href="prac0.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="prac0.css" />
   </head>
   <body>
     <h1 id="title">Are You Cool?</h1>
     <p id="description">Do all the people stare at you? Have you got perfect hair? Anyone ever called you "rad"? Take my survey and I'll return an answer!</p>
+    <hr>
     <form id="survey-form">
         <fieldset>
-      <label id="name-label" for="name">Nickname <input required id="name" type="text" placeholder="Name"></label><br>
-      <label id="email-label" for="email">Email <input required id="email" type="email" placeholder="Email"></label><br>
-      <label id="number-label" for="number">How cool are you? <input min="0" max="10" id="number" type="number" placeholder="1-10"></label>
+      <label class="other" id="name-label" for="name">Nickname <input required id="name" type="text" placeholder="Name"></label><br>
+      <label class="other" id="email-label" for="email">Email <input required id="email" type="email" placeholder="Email"></label><br>
+      <label class="other" number-label" for="number">How cool are you? (1-10)<input min="0" max="10" id="number" type="number" placeholder="1-10"></label>
       </fieldset>
       <fieldset>
       <p>Do you watch MMA?</p>
@@ -23,14 +26,15 @@
           <input name="yesorno" value="no" type="radio">
       </label><br>
       <p>Check all that apply:</p>
-      <label>
-        <input value="happy" type="checkbox">I'm happy.
+      <label id="checklabel">
+        <input class="checkbox" value="happy" type="checkbox">I'm happy.
       </label>
-      <label>
-        <input value="smart" type="checkbox">I'm smart.
-      <label>
-        <input value="helpful" type="checkbox">I'm helpful.
-      </label><br></fieldset>
+      <label class="checklabel">
+        <input id="checkbox" value="smart" type="checkbox">I'm smart.
+      <label id="checklabel">
+        <input class="checkbox" value="helpful" type="checkbox">I'm helpful.
+      </label><br>
+    </fieldset>
       <fieldset>
       <p>Has anyone called you cool before?</p>
       <select id="dropdown">
@@ -44,8 +48,8 @@
           <textarea placeholder="Enter text here">
 
           </textarea>
-          <button id="submit" type="submit">Submit</button>
+          <button  id="submit" type="submit"><img width="50px" height="50px" src="https://cdn-icons-png.flaticon.com/512/1933/1933108.png">Submit</button>
           </fieldset>
     </form>
   </body>
-  </html
+</html>
