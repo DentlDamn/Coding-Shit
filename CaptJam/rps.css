@@ -14,11 +14,11 @@ img {
   width: 100px;
   height: 100px;
 }
-#rulesbutton:active {
+#rulesbutton:hover {
   position: relative;
   margin-top: 2px;
 }
-button:active {
+button:hover {
   position: relative;
   margin-top: 2px;
 }
