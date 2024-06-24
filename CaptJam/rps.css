@@ -1,0 +1,83 @@
+
+h1 {
+    text-align: center;
+}
+
+body {
+    background-size: 200%;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/007/243/548/non_2x/boxing-ring-background-concept-free-vector.jpg');
+     color: crimson;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    background-color: #14bcd4;
+}
+img {
+    width: 100px;
+    height: 100px;
+}
+button {
+    background-color: crimson;
+    border: 2px groove goldenrod;
+    border-radius: 25%;
+    font-size: 22px;
+}
+#rules {
+    margin-left: 525px;
+}
+#you {
+    color: orange;
+    font-size: large;
+    margin-right: 30px;
+}
+#cpu {
+    color: orange;
+    font-size: large;
+    margin-left: 30px;
+}
+#men {
+    display: inline-block;
+}
+#prompt {
+    margin-top: 50px;
+    color: orange;
+    font-weight: 900;
+    text-align: center;
+}
+#bigdiv {
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 38%;
+}
+#div0 {
+    display: flex;
+    flex-direction: column;
+}
+#div1 {
+    display: flex;
+    flex-direction: column;
+}
+#div2 {
+    display: flex;
+    flex-direction: column;
+}
+#score0 {
+    padding-right: 25px;
+    font-size: 70px;
+}
+#score1 {
+    padding-left: 25px;
+    font-size: 70px;
+}
+#score3 {
+    text-align: center;
+    font-size: 72px;
+}
+.choices {
+    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
