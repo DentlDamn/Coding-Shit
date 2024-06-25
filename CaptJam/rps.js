@@ -6,90 +6,85 @@
     
 */
 
-var playerScore = 0;
-var cpuScore = 0;
+let playerScore = 0;
+let cpuScore = 0;
+let choices = ["jab", "hook", "upper"];
+let randomPunch = choices[Math.floor(Math.random() * choices.length)];
 
 game();
 function game() {
-  if (playerScore || cpuScore < 3) {
+  if (playerScore < 3 && cpuScore < 3) {
+    console.log("Score Updated");
+    console.log(cpuScore, playerScore);
+    document.getElementById("score0").innerHTML = playerScore;
+    document.getElementById("score1").innerHTML = cpuScore;
     playGame();
   } else {
-    refresh();
+    console.log("Game End");
+    location.reload();
   }
 }
 
+playGame();
 function playGame() {
-  var choices = ["jab", "hook", "upper"];
-  let randomPunch = choices[Math.floor(Math.random() * choices.length)];
   document.getElementById("jab").onclick = function () {
-    var playerChoice = "jab";
+    let playerChoice = "jab";
     console.log(playerChoice + playerScore);
     console.log(randomPunch);
+    winner(randomPunch, playerChoice);
   };
   document.getElementById("hook").onclick = function () {
-    var playerChoice = "hook";
+    let playerChoice = "hook";
     console.log(playerChoice + playerScore);
     console.log(randomPunch);
+    winner(randomPunch, playerChoice);
   };
   document.getElementById("upper").onclick = function () {
-    var playerChoice = "upper";
+    let playerChoice = "upper";
     console.log(playerChoice + playerScore);
     console.log(randomPunch);
+    winner(randomPunch, playerChoice);
   };
-  winner(randomPunch, playerChoice);
 }
-playGame();
 
 function winner(randomPunch, playerChoice) {
   if (randomPunch === "jab" && playerChoice === "hook") {
     playerScore++;
     console.log("One point to you!");
+    /*document.getElementById("score0").innerHTML = playerScore;*/
+    game();
   } else if (randomPunch === "jab" && playerChoice === "upper") {
     cpuScore++;
     console.log("One point to the CPU!");
+    game();
   } else if (randomPunch === "jab" && playerChoice === "jab") {
-    console.log("It's a Tie!");
+    console.log("it's a tie!");
+    game();
   } else if (randomPunch === "hook" && playerChoice === "jab") {
     cpuScore++;
     console.log("One point to the CPU!");
+    game();
   } else if (randomPunch === "hook" && playerChoice === "upper") {
     playerScore++;
     console.log("One point to you!");
+    game();
   } else if (randomPunch === "hook" && playerChoice === "hook") {
     console.log("It's a Tie!");
+    game();
   } else if (randomPunch === "upper" && playerChoice === "hook") {
     cpuScore++;
     console.log("One point to the CPU!");
+    game();
   } else if (randomPunch === "upper" && playerChoice === "jab") {
     playerScore++;
     console.log("One point ot you!");
+    game();
   } else if (randomPunch === "upper" && playerChoice === "upper") {
     console.log("It's a Tie!");
-  }
-  winner(randomPunch, playerChoice);
-}
-/*function winner(randomPunch, playerChoice) {
-  if (randomPunch === "jab" && playerChoice === "hook") {
-    playerScore++;
-  } else if (randomPunch === "jab" && playerChoice === "upper") {
-    cpuScore++;
-  } else if (randomPunch === "jab" && playerChoice === "jab") {
-    console.log("It's a Tie!");
-  } else if (randomPunch === "hook" && playerChoice === "jab") {
-    cpuScore++;
-  } else if (randomPunch === "hook" && playerChoice === "upper") {
-    playerScore++;
-  } else if (randomPunch === "hook" && playerChoice === "hook") {
-    console.log("It's a Tie!");
-  } else if (randomPunch === "upper" && playerChoice === "hook") {
-    cpuScore++;
-  } else if (randomPunch === "upper" && playerChoice === "jab") {
-    playerScore++;
-  } else if (randomPunch === "upper" && playerChoice === "upper") {
-    console.log("It's a Tie!");
+    game();
   }
 }
-winner();
+
 /*jab.document.addEventListener("onclick", playGame);
 let you = document.getElementById("score0");
 let cpu = document.getElementById("score1");*/
